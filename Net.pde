@@ -1,5 +1,5 @@
 
-int nDots = 100;
+int nDots = 1000;
 PVector[] dots;
 
 void setup () {
@@ -12,7 +12,7 @@ void setup () {
 }
 
 void draw () {
-  background(255);
+  background(0);
 
   updateDots();
   renderDots();
@@ -32,6 +32,10 @@ void updateDots() {
 
 void renderDots() {
   for (int i = 0; i < nDots; i++) {
+    fill(85, 227, 176);
+    noStroke();
     ellipse(dots[i].x, dots[i].y, 6, 6);
+    fill(85, 227, 176, 50);
+    ellipse(dots[i].x, dots[i].y, 23, 23);
   }
 }
